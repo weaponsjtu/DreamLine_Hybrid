@@ -15,6 +15,11 @@
 
         <div id="listview"  class="ubt bc-border sc-bg"></div>
 
+        <style>
+            li {
+                height: 100px;
+            }
+        </style>
         <script src="js/appcan.js"></script>
         <script src="js/appcan.control.js"></script>
         <script src="js/appcan.listview.js"></script>
@@ -27,8 +32,8 @@
         var lv = appcan.listview({
             selector : "#listview",
             type : "thickLine",
-            hasAngle: false,
-            multiline: 3
+            hasAngle : false,
+            multiline : 3
         });
         lv.set([{
             title : "昨天梦见了关羽上将，还梦见了冉闵上将，屠胡令",

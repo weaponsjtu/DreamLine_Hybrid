@@ -28,7 +28,7 @@
 
             </div>
             <!--content结束-->
-            <div id="tabview" class="uf sc-bg ubt sc-border-tab"></div>
+            <div id="footer" class="uf sc-bg ubt sc-border-tab"></div>
         </div>
         <script src="js/appcan.js"></script>
         <script src="js/appcan.control.js"></script>
@@ -55,7 +55,8 @@
                 left : 0,
                 index : 0,
                 change : function(index, res) {/*浮动窗口推拽变更时回调，可控制tab进行同步变更*/
-                    tabView.moveTo(res.multiPopSelectedIndex);
+                    //appcan.window.alert("frame change" + res);
+                    tabview.moveTo(res.multiPopSelectedIndex);
                 }
             });
 
@@ -69,7 +70,7 @@
             this.id == "nav-right" && appcan.frame.open("content", "record_content.html", 0, titHeight)
         })
         var tabview = appcan.tab({
-            selector : "#tabview",
+            selector : "#footer",
             hasIcon : true,
             hasAnim : true,
             hasLabel : true,
@@ -87,6 +88,7 @@
             }]
         });
         tabview.on("click", function(obj, index) {
+            //appcan.window.alert("helloworld ###" + index);
             appcan.window.selectMultiPopover("content", index);
         })
     </script>
